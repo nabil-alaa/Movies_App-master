@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Movies App</title>
+        <!-- icons -->
+        <link rel="stylesheet" href="css/all.min.css" />
+        <!-- fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,700;0,900;1,100;1,200;1,300;1,400;1,600;1,700;1,800;1,900&family=Cairo:wght@200;300;400;500;600;700;800;900;1000&family=Josefin+Sans:ital,wght@0,400;0,500;0,600;0,700;1,500;1,600;1,700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Nunito+Sans:ital,opsz,wght@0,6..12,300;0,6..12,400;0,6..12,500;0,6..12,700;0,6..12,800;0,6..12,900;1,6..12,500;1,6..12,600;1,6..12,700;1,6..12,800;1,6..12,900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Outfit:wght@300;700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300;400;500;600;700&family=Red+Hat+Display:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,100;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300;0,400;0,500;0,700;0,800;0,900;1,300;1,500;1,700&family=Tajawal:wght@200;300;400;500;800;900&family=Varela+Round&display=swap"
+            rel="stylesheet"
+        />
+        <!-- stylesheet link -->
+        <script src="https://cdn.tailwindcss.com"></script>
+
+        <link rel="stylesheet" href="css/style.css" />
+    </head>
+    <body>
+        <!--Navbar  -->
+        <header
+            class="fixed top-0 right-0 w-full flex justify-between items-center py-5 px-28 z-50 transition max-[370px]:p-[6px_4%] max-[774px]:p-[12px_4%] max-[991px]:p-[18px_4%]"
+        >
+            <a
+                href="#home"
+                class="logo text-lg font-semibold text-[var(--bg-color)] flex items-center; gap-x-2"
+            >
+                <i
+                    class="fa-solid fa-film text-2xl text-[var(--main-color)]"
+                ></i>
+                Movies
+            </a>
+            <div
+                id="menu-icon"
+                class="text-2xl cursor-pointer z-50 hidden max-[774px]:block"
+            >
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <!-- menu -->
+            <ul
+                class="navbar gap-x-20 flex z-50 max-[774px]:absolute max-[774px]:-top-[578px] max-[774px]:left-0 max-[774px]:right-0 max-[774px]:flex max-[774px]:flex-col max-[774px]:bg-[var(--bg-color)] max-[774px]:gap-y-6 max-[774px]:p-5 max-[774px]:box-shadow[4px_4px_0 4px_rgb(14 55 54 / 15%)] max-[774px]:text-center text-[var(--text-color)]"
+            >
+                <li class="relative">
+                    <a
+                        class="font-medium text-base text-[var(--bg-color)] after:content[*] after:absolute after:bg-[var(--main-color)] after:w-full after:h-1 after:left-0 after:-bottom-1 max-[774px]:text-[var(--text-color)] max-[774px]:duration-300 hover:max-[774px]:text-[var(--main-color)] hover:max-[774px]:border-b-2 hover:max-[774px]:border-[var(--main-color)] max-[774px]:after:hidden after:duration-[0.4s]"
+                        href="#home"
+                        >Home</a
+                    >
+                </li>
+                <li class="relative">
+                    <a
+                        class="font-medium text-base text-[var(--bg-color)] after:content[*] after:absolute after:bg-[var(--main-color)] after:w-0 after:h-1 after:left-0 after:-bottom-1 after:hover:w-full max-[774px]:text-[var(--text-color)] max-[774px]:duration-300 hover:max-[774px]:text-[var(--main-color)] hover:max-[774px]:border-b-2 hover:max-[774px]:border-[var(--main-color)] max-[774px]:after:hidden ease-linear after:duration-[0.4s]"
+                        href="#movies"
+                        >Movies</a
+                    >
+                </li>
+                <li class="relative">
+                    <a
+                        class="font-medium text-base text-[var(--bg-color)] after:content[*] after:absolute after:bg-[var(--main-color)] after:w-0 after:h-1 after:left-0 after:-bottom-1 after:hover:w-full max-[774px]:text-[var(--text-color)] max-[774px]:duration-300 hover:max-[774px]:text-[var(--main-color)] hover:max-[774px]:border-b-2 hover:max-[774px]:border-[var(--main-color)] max-[774px]:after:hidden ease-linear after:duration-[0.4s]"
+                        href="#coming soon"
+                        >Coming Soon</a
+                    >
+                </li>
+                <li class="relative">
+                    <a
+                        class="font-medium text-base text-[var(--bg-color)] after:content[*] after:absolute after:bg-[var(--main-color)] after:w-0 after:h-1 after:left-0 after:-bottom-1 after:hover:w-full max-[774px]:text-[var(--text-color)] max-[774px]:duration-300 hover:max-[774px]:text-[var(--main-color)] hover:max-[774px]:border-b-2 hover:max-[774px]:border-[var(--main-color)] max-[774px]:after:hidden ease-linear after:duration-[0.4s]"
+                        href="#newsletter"
+                        >Newsletter</a
+                    >
+                </li>
+            </ul>
+            <a
+                href="#"
+                class="bg-[var(--main-color)] text-[var(--bg-color)] py-3 px-6 rounded-lg font-normal hover:bg-[#fa1216]"
+                >Sign In</a
+            >
+        </header>
+        <!-- end navbar -->
+        <!-- Home -->
+        <section
+            id="home"
+            class="w-full min-h-screen bg-[url(../img/home3.jpg)] bg-center bg-cover relative max-[991px]:px-[4%]: max-[991px]:py-12"
+        >
+            <div
+                class="absolute top-[40%] pl-20 max-[1080px]:px-24 max-[991px]:p-[4%]"
+            >
+                <span class="font-medium text-black uppercase"
+                    >Marvel Universe</span
+                >
+                <h2
+                    class="text-[var(--bg-color)] text-6xl font-bold max-[991px]:text-5xl max-[774px]:text-4xl max-[370px]:text-3xl max-[300px]:text-xl !leading-normal"
+                >
+                    Spider-Man
+                    <br />
+                    Far From Home
+                </h2>
+                <a
+                    href="#"
+                    class="btn bg-[var(--main-color)] text-[var(--bg-color)] py-3 px-6 rounded-lg font-normal hover:bg-[#fa1216] max-[774px]:py-2 max-[774px]:px-5 inline-block"
+                    >Book Now</a
+                >
+            </div>
+        </section>
+        <!-- Home -->
+        <!-- Movies -->
+        <section id="movies" class="max-[991px]:px-[4%]: max-[991px]:py-12">
+            <h2
+                class="font-medium text-xl uppercase border-b border-[var(--main-color)] max-w-[1000px] mx-auto"
+            >
+                Opening this Week
+            </h2>
+            <div
+                class="max-[774px]:grid-cols-[repeat(auto-fit,minmax(160px,auto))] max-w-[1000px] mx-auto grid grid-cols-[repeat(auto-fit,minmax(180px,auto))] max-[370px]:grid-cols-[repeat(auto-fit,minmax(140px,auto))] gap-4 mt-8"
+            >
+                <!-- Box 1 -->
+                <div>
+                    <div class="w-full h-[270px] w-full h-[270px]">
+                        <img
+                            src="img/m1.jpg"
+                            alt=""
+                            class="hover:-translate-y-3 w-full h-full object-cover cursor-pointer duration-[0.2s] ease-linear"
+                        />
+                    </div>
+                    <h3 class="text-sm font-medium text-[var(--main-color)]">
+                        Venom
+                    </h3>
+                    <span class="text-xs">120min | Action</span>
+                </div>
+                <!-- Box 2 -->
+                <div>
+                    <div class="w-full h-[270px] w-full h-[270px]">
+                        <img
+                            src="img/m2.jpg"
+                            alt=""
+                            class="hover:-translate-y-3 w-full h-full object-cover cursor-pointer duration-[0.2s] ease-linear"
+                        />
+                    </div>
+                    <h3 class="text-sm font-medium text-[var(--main-color)]">
+                        Dunkerk
+                    </h3>
+                    <span class="text-xs">105min | Adventure</span>
+                </div>
+                <!-- Box 3 -->
+                <div>
+                    <div class="w-full h-[270px] w-full h-[270px]">
+                        <img
+                            src="img/m3.jpg"
+                            alt=""
+                            class="hover:-translate-y-3 w-full h-full object-cover cursor-pointer duration-[0.2s] ease-linear"
+                        />
+                    </div>
+                    <h3 class="text-sm font-medium text-[var(--main-color)]">
+                        Batman & Superman
+                    </h3>
+                    <span class="text-xs">100min | Thriller</span>
+                </div>
+                <!-- Box 4-->
+                <div>
+                    <div class="w-full h-[270px] w-full h-[270px]">
+                        <img
+                            src="img/m4.jpg"
+                            alt=""
+                            class="hover:-translate-y-3 w-full h-full object-cover cursor-pointer duration-[0.2s] ease-linear"
+                        />
+                    </div>
+                    <h3 class="text-sm font-medium text-[var(--main-color)]">
+                        John Wick
+                    </h3>
+                    <span class="text-xs">120min | Adventure</span>
+                </div>
+                <!-- Box 5-->
+                <div>
+                    <div class="w-full h-[270px] w-full h-[270px]">
+                        <img
+                            src="img/m5.jpg"
+                            alt=""
+                            class="hover:-translate-y-3 w-full h-full object-cover cursor-pointer duration-[0.2s] ease-linear"
+                        />
+                    </div>
+                    <h3 class="text-sm font-medium text-[var(--main-color)]">
+                        Aquaman
+                    </h3>
+                    <span class="text-xs">130min | Action</span>
+                </div>
+                <!-- Box 6-->
+                <div>
+                    <div class="w-full h-[270px] w-full h-[270px]">
+                        <img
+                            src="img/m6.jpg"
+                            alt=""
+                            class="hover:-translate-y-3 w-full h-full object-cover cursor-pointer duration-[0.2s] ease-linear"
+                        />
+                    </div>
+                    <h3 class="text-sm font-medium text-[var(--main-color)]">
+                        Black Panther
+                    </h3>
+                    <span class="text-xs">90min | Thriller</span>
+                </div>
+                <!-- Box 7-->
+                <div>
+                    <div class="w-full h-[270px] w-full h-[270px]">
+                        <img
+                            src="img/m7.jpg"
+                            alt=""
+                            class="hover:-translate-y-3 w-full h-full object-cover cursor-pointer duration-[0.2s] ease-linear"
+                        />
+                    </div>
+                    <h3 class="text-sm font-medium text-[var(--main-color)]">
+                        Thor
+                    </h3>
+                    <span class="text-xs">130min | Action</span>
+                </div>
+                <!-- Box 8-->
+                <div>
+                    <div class="w-full h-[270px] w-full h-[270px]">
+                        <img
+                            src="img/m8.png"
+                            alt=""
+                            class="hover:-translate-y-3 w-full h-full object-cover cursor-pointer duration-[0.2s] ease-linear"
+                        />
+                    </div>
+                    <h3 class="text-sm font-medium text-[var(--main-color)]">
+                        Bumblebee
+                    </h3>
+                    <span class="text-xs">100min | Thriller</span>
+                </div>
+                <!-- Box 9-->
+                <div>
+                    <div class="w-full h-[270px] w-full h-[270px]">
+                        <img
+                            src="img/m9.jpg"
+                            alt=""
+                            class="hover:-translate-y-3 w-full h-full object-cover cursor-pointer duration-[0.2s] ease-linear"
+                        />
+                    </div>
+                    <h3 class="text-sm font-medium text-[var(--main-color)]">
+                        Mortal Engines
+                    </h3>
+                    <span class="text-xs">100min | Action</span>
+                </div>
+                <!-- Box 10-->
+                <div>
+                    <div class="w-full h-[270px]">
+                        <img
+                            src="img/m10.jpg"
+                            alt=""
+                            class="hover:-translate-y-3 w-full h-full object-cover cursor-pointer duration-[0.2s] ease-linear"
+                        />
+                    </div>
+                    <h3 class="text-sm font-medium text-[var(--main-color)]">
+                        UnderWorld Blood Wars
+                    </h3>
+                    <span class="text-xs">100min | Action</span>
+                </div>
+            </div>
+        </section>
+        <!-- Movies -->
+        <!-- Coming Soon -->
+        <section id="coming soon" class="max-[991px]:px-[4%] max-[991px]:py-12">
+            <h2
+                class="font-medium text-xl uppercase border-b border-[var(--main-color)] max-w-[1000px] mx-auto"
+            >
+                Coming Soon
+            </h2>
+            <div
+                class="max-[774px]:grid-cols-[repeat(auto-fit,minmax(160px,auto))] max-[370px]:grid-cols-[repeat(auto-fit,minmax(140px,auto))] max-w-[1000px] mx-auto grid grid-cols-[repeat(auto-fit,minmax(180px,auto))] gap-4 mt-8"
+            >
+                <div>
+                    <div class="w-full h-[270px]">
+                        <img
+                            src="img/coming1.jpg"
+                            alt=""
+                            class="hover:-translate-y-3 w-full h-full object-cover cursor-pointer duration-[0.2s] ease-linear"
+                        />
+                    </div>
+                    <h3 class="text-sm font-medium text-[var(--main-color)]">
+                        Joney English
+                    </h3>
+                    <span class="text-xs">80min | Comedy</span>
+                </div>
+                <div>
+                    <div class="w-full h-[270px]">
+                        <img
+                            src="img/coming2.jpg"
+                            alt=""
+                            class="hover:-translate-y-3 w-full h-full object-cover cursor-pointer duration-[0.2s] ease-linear"
+                        />
+                    </div>
+                    <h3 class="text-sm font-medium text-[var(--main-color)]">
+                        WarCrafet
+                    </h3>
+                    <span class="text-xs">120min | Action</span>
+                </div>
+                <div>
+                    <div class="w-full h-[270px]">
+                        <img
+                            src="img/coming3.jpg"
+                            alt=""
+                            class="hover:-translate-y-3 w-full h-full object-cover cursor-pointer duration-[0.2s] ease-linear"
+                        />
+                    </div>
+                    <h3 class="text-sm font-medium text-[var(--main-color)]">
+                        Rampage
+                    </h3>
+                    <span class="text-xs">108min | Adventure</span>
+                </div>
+                <div>
+                    <div class="w-full h-[270px]">
+                        <img
+                            src="img/coming4.jpg"
+                            alt=""
+                            class="hover:-translate-y-3 w-full h-full object-cover cursor-pointer duration-[0.2s] ease-linear"
+                        />
+                    </div>
+                    <h3 class="text-sm font-medium text-[var(--main-color)]">
+                        Airon Lady
+                    </h3>
+                    <span class="text-xs">120min | Comedy</span>
+                </div>
+                <div>
+                    <div class="w-full h-[270px]">
+                        <img
+                            src="img/coming5.jpg"
+                            alt=""
+                            class="hover:-translate-y-3 w-full h-full object-cover cursor-pointer duration-[0.2s] ease-linear"
+                        />
+                    </div>
+                    <h3 class="text-sm font-medium text-[var(--main-color)]">
+                        Justice League
+                    </h3>
+                    <span class="text-xs">120min | Adventure</span>
+                </div>
+                <div>
+                    <div class="w-full h-[270px]">
+                        <img
+                            src="img/coming6.jpeg"
+                            alt=""
+                            class="hover:-translate-y-3 w-full h-full object-cover cursor-pointer duration-[0.2s] ease-linear"
+                        />
+                    </div>
+                    <h3 class="text-sm font-medium text-[var(--main-color)]">
+                        Doctor Strange
+                    </h3>
+                    <span class="text-xs">120min | Adventure</span>
+                </div>
+                <div>
+                    <div class="w-full h-[270px]">
+                        <img
+                            src="img/coming7.jpg"
+                            alt=""
+                            class="hover:-translate-y-3 w-full h-full object-cover cursor-pointer duration-[0.2s] ease-linear"
+                        />
+                    </div>
+                    <h3 class="text-sm font-medium text-[var(--main-color)]">
+                        Captain Marvel
+                    </h3>
+                    <span class="text-xs">120min | Adventure</span>
+                </div>
+                <div>
+                    <div class="w-full h-[270px]">
+                        <img
+                            src="img/coming8.jpg"
+                            alt=""
+                            class="hover:-translate-y-3 w-full h-full object-cover cursor-pointer duration-[0.2s] ease-linear"
+                        />
+                    </div>
+                    <h3 class="text-sm font-medium text-[var(--main-color)]">
+                        Black Widow
+                    </h3>
+                    <span class="text-xs">90min | Action</span>
+                </div>
+                <div>
+                    <div class="w-full h-[270px]">
+                        <img
+                            src="img/coming9.jpg"
+                            alt=""
+                            class="hover:-translate-y-3 w-full h-full object-cover cursor-pointer duration-[0.2s] ease-linear"
+                        />
+                    </div>
+                    <h3 class="text-sm font-medium text-[var(--main-color)]">
+                        Ant Man
+                    </h3>
+                    <span class="text-xs">110min | Adventure</span>
+                </div>
+                <div>
+                    <div class="w-full h-[270px]">
+                        <img
+                            src="img/coming10.jpg"
+                            alt=""
+                            class="hover:-translate-y-3 w-full h-full object-cover cursor-pointer duration-[0.2s] ease-linear"
+                        />
+                    </div>
+                    <h3 class="text-sm font-medium text-[var(--main-color)]">
+                        Guardiance Of The Galaxy
+                    </h3>
+                    <span class="text-xs">120min | Adventure</span>
+                </div>
+            </div>
+        </section>
+        <!-- Coming Soon -->
+        <!-- Newsletter -->
+        <section
+            id="newsletter"
+            class="news max-w-[1000px] mx-auto flex flex-col items-center justify-center gap-y-8 max-[991px]:px-[4%]: max-[991px]:py-12"
+        >
+            <h2 class="text-3xl font-semibold text-center leading-normal">
+                Subscribe To Get <br />
+                Newsletter
+            </h2>
+            <form class="flex items-center p-3 bg-[var(--bg-color)] rounded-lg">
+                <input
+                    class="border-0; outline-0 w-[300px] placeholder:text-[var(--text-color)] text-black placeholder:text-sm placeholder:font-normal max-[472px]:hidden"
+                    type="email"
+                    placeholder="Enter Email..."
+                />
+                <input
+                    type="submit"
+                    value="Subscribe"
+                    class="border-0 outline-0; cursor-pointer bg-[var(--main-color)] text-[var(--bg-color)] py-3 px-6 rounded-lg font-semibold uppercase hover:bg-[#fa1216]"
+                />
+            </form>
+        </section>
+        <!-- Newsletter -->
+        <!-- footer -->
+        <section
+            class="flex items-center justify-between max-w-[1000px] mx-auto max-[991px]:px-[4%]: max-[991px]:py-12 max-[472px]:flex-col max-[472px]:items-center max-[472px]:gap-y-4"
+        >
+            <a
+                href="index.html"
+                class="text-lg font-semibold text-[var(--bg-color)] flex items-center gap-x-2"
+            >
+                <i
+                    class="fa-solid fa-film text-2xl text-[var(--main-color)]"
+                ></i>
+                Movies
+            </a>
+            <div class="social-icons items-center flex gap-x-2">
+                <a
+                    href="#"
+                    class="w-14 h-14 rounded-full text-3xl text-center leading-[55px] bg-[var(--bg-color)] text-[var(--main-color)] border-spacing-1 border-[#02030766] duration-[0.2s] ease-linear hover:bg-[var(--main-color)] hover:text-[var(--bg-color)]"
+                >
+                    <i class="fa-brands fa-facebook"></i
+                ></a>
+                <a
+                    href="#"
+                    class="w-14 h-14 rounded-full text-3xl text-center leading-[55px] bg-[var(--bg-color)] text-[var(--main-color)] border-spacing-1 border-[#02030766] duration-[0.2s] ease-linear hover:bg-[var(--main-color)] hover:text-[var(--bg-color)]"
+                    ><i class="fa-brands fa-instagram"></i
+                ></a>
+                <a
+                    href="#"
+                    class="w-14 h-14 rounded-full text-3xl text-center leading-[55px] bg-[var(--bg-color)] text-[var(--main-color)] border-spacing-1 border-[#02030766] duration-[0.2s] ease-linear hover:bg-[var(--main-color)] hover:text-[var(--bg-color)]"
+                    ><i class="fa-brands fa-twitter"></i
+                ></a>
+                <a
+                    href="#"
+                    class="w-14 h-14 rounded-full text-3xl text-center leading-[55px] bg-[var(--bg-color)] text-[var(--main-color)] border-spacing-1 border-[#02030766] duration-[0.2s] ease-linear hover:bg-[var(--main-color)] hover:text-[var(--bg-color)]"
+                    ><i class="fa-brands fa-tiktok"></i
+                ></a>
+            </div>
+        </section>
+        <!-- footer -->
+        <!-- copyrights -->
+        <div class="text-center text-[var(--bg-color)] text-lg">
+            <p>
+                &#169;
+                <span class="text-[var(--main-color)] cursor-pointer"
+                    >Web Masters</span
+                >
+                All Right Reserved.
+            </p>
+        </div>
+        <!-- copyrights -->
+        <script src="js/main.js"></script>
+    </body>
+</html>
+
