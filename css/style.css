@@ -1,11 +1,3 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-* {
-    scroll-padding-top: 2rem;
-}
-
 /* custom scroll bar */
 html::-webkit-scrollbar {
     width: 0.5rem;
@@ -21,13 +13,9 @@ html::-webkit-scrollbar-thumb {
     --text-color: #020307;
     --bg-color: #fff;
 }
-section {
-    padding: 4.5rem 1.5rem;
-}
+
 body {
     font-family: "Poppins", sans-serif;
-    background: var(--text-color);
-    color: var(--bg-color);
 }
 /* Navbar */
 
@@ -42,8 +30,6 @@ header.shadow .logo {
     color: var(--text-color);
 }
 
-/* Resbonsive */
-
 .active {
     top: 100%;
 }
@@ -54,4 +40,3 @@ header.shadow #menu-icon {
 .navbar.active {
     top: 100%;
 }
-

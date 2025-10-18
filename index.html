@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en" class="scroll-smooth scro">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -18,7 +18,7 @@
 
         <link rel="stylesheet" href="css/style.css" />
     </head>
-    <body>
+    <body class="text-[var(--bg-color)] bg-[var(--text-color)]">
         <!--Navbar  -->
         <header
             class="fixed top-0 right-0 w-full flex justify-between items-center py-5 px-28 z-50 transition max-[370px]:p-[6px_4%] max-[774px]:p-[12px_4%] max-[991px]:p-[18px_4%]"
@@ -81,7 +81,7 @@
         <!-- Home -->
         <section
             id="home"
-            class="w-full min-h-screen bg-[url(img/home3.jpg)] bg-center bg-cover relative max-[991px]:px-[4%]: max-[991px]:py-12"
+            class="py-[4.5rem] px-6 w-full min-h-screen bg-[url(img/home3.jpg)] bg-center bg-cover relative max-[991px]:px-[4%]: max-[991px]:py-12"
         >
             <div
                 class="absolute top-[40%] pl-20 max-[1080px]:px-24 max-[991px]:p-[4%]"
@@ -105,7 +105,10 @@
         </section>
         <!-- Home -->
         <!-- Movies -->
-        <section id="movies" class="max-[991px]:px-[4%]: max-[991px]:py-12">
+        <section
+            id="movies"
+            class="py-[4.5rem] px-6 max-[991px]:px-[4%]: max-[991px]:py-12"
+        >
             <h2
                 class="font-medium text-xl uppercase border-b border-[var(--main-color)] max-w-[1000px] mx-auto"
             >
@@ -116,126 +119,144 @@
             >
                 <!-- Box 1 -->
                 <div>
-                    <div class="w-full h-[270px] w-full h-[270px]">
+                    <div class="w-full h-[270px]">
                         <img
                             src="img/m1.jpg"
                             alt=""
                             class="hover:-translate-y-3 w-full h-full object-cover cursor-pointer duration-[0.2s] ease-linear"
                         />
                     </div>
-                    <h3 class="text-sm font-medium text-[var(--main-color)]">
+                    <h3
+                        class="text-sm max-md:mt-6 font-medium text-[var(--main-color)]"
+                    >
                         Venom
                     </h3>
                     <span class="text-xs">120min | Action</span>
                 </div>
                 <!-- Box 2 -->
                 <div>
-                    <div class="w-full h-[270px] w-full h-[270px]">
+                    <div class="w-full h-[270px]">
                         <img
                             src="img/m2.jpg"
                             alt=""
                             class="hover:-translate-y-3 w-full h-full object-cover cursor-pointer duration-[0.2s] ease-linear"
                         />
                     </div>
-                    <h3 class="text-sm font-medium text-[var(--main-color)]">
+                    <h3
+                        class="text-sm max-md:mt-6 font-medium text-[var(--main-color)]"
+                    >
                         Dunkerk
                     </h3>
                     <span class="text-xs">105min | Adventure</span>
                 </div>
                 <!-- Box 3 -->
                 <div>
-                    <div class="w-full h-[270px] w-full h-[270px]">
+                    <div class="w-full h-[270px]">
                         <img
                             src="img/m3.jpg"
                             alt=""
                             class="hover:-translate-y-3 w-full h-full object-cover cursor-pointer duration-[0.2s] ease-linear"
                         />
                     </div>
-                    <h3 class="text-sm font-medium text-[var(--main-color)]">
+                    <h3
+                        class="text-sm max-md:mt-6 font-medium text-[var(--main-color)]"
+                    >
                         Batman & Superman
                     </h3>
                     <span class="text-xs">100min | Thriller</span>
                 </div>
                 <!-- Box 4-->
                 <div>
-                    <div class="w-full h-[270px] w-full h-[270px]">
+                    <div class="w-full h-[270px]">
                         <img
                             src="img/m4.jpg"
                             alt=""
                             class="hover:-translate-y-3 w-full h-full object-cover cursor-pointer duration-[0.2s] ease-linear"
                         />
                     </div>
-                    <h3 class="text-sm font-medium text-[var(--main-color)]">
+                    <h3
+                        class="text-sm max-md:mt-6 font-medium text-[var(--main-color)]"
+                    >
                         John Wick
                     </h3>
                     <span class="text-xs">120min | Adventure</span>
                 </div>
                 <!-- Box 5-->
                 <div>
-                    <div class="w-full h-[270px] w-full h-[270px]">
+                    <div class="w-full h-[270px]">
                         <img
                             src="img/m5.jpg"
                             alt=""
                             class="hover:-translate-y-3 w-full h-full object-cover cursor-pointer duration-[0.2s] ease-linear"
                         />
                     </div>
-                    <h3 class="text-sm font-medium text-[var(--main-color)]">
+                    <h3
+                        class="text-sm max-md:mt-6 font-medium text-[var(--main-color)]"
+                    >
                         Aquaman
                     </h3>
                     <span class="text-xs">130min | Action</span>
                 </div>
                 <!-- Box 6-->
                 <div>
-                    <div class="w-full h-[270px] w-full h-[270px]">
+                    <div class="w-full h-[270px]">
                         <img
                             src="img/m6.jpg"
                             alt=""
                             class="hover:-translate-y-3 w-full h-full object-cover cursor-pointer duration-[0.2s] ease-linear"
                         />
                     </div>
-                    <h3 class="text-sm font-medium text-[var(--main-color)]">
+                    <h3
+                        class="text-sm max-md:mt-6 font-medium text-[var(--main-color)]"
+                    >
                         Black Panther
                     </h3>
                     <span class="text-xs">90min | Thriller</span>
                 </div>
                 <!-- Box 7-->
                 <div>
-                    <div class="w-full h-[270px] w-full h-[270px]">
+                    <div class="w-full h-[270px]">
                         <img
                             src="img/m7.jpg"
                             alt=""
                             class="hover:-translate-y-3 w-full h-full object-cover cursor-pointer duration-[0.2s] ease-linear"
                         />
                     </div>
-                    <h3 class="text-sm font-medium text-[var(--main-color)]">
+                    <h3
+                        class="text-sm max-md:mt-6 font-medium text-[var(--main-color)]"
+                    >
                         Thor
                     </h3>
                     <span class="text-xs">130min | Action</span>
                 </div>
                 <!-- Box 8-->
                 <div>
-                    <div class="w-full h-[270px] w-full h-[270px]">
+                    <div class="w-full h-[270px]">
                         <img
                             src="img/m8.png"
                             alt=""
                             class="hover:-translate-y-3 w-full h-full object-cover cursor-pointer duration-[0.2s] ease-linear"
                         />
                     </div>
-                    <h3 class="text-sm font-medium text-[var(--main-color)]">
+                    <h3
+                        class="text-sm max-md:mt-6 font-medium text-[var(--main-color)]"
+                    >
                         Bumblebee
                     </h3>
                     <span class="text-xs">100min | Thriller</span>
                 </div>
                 <!-- Box 9-->
                 <div>
-                    <div class="w-full h-[270px] w-full h-[270px]">
+                    <div class="w-full h-[270px]">
                         <img
                             src="img/m9.jpg"
                             alt=""
                             class="hover:-translate-y-3 w-full h-full object-cover cursor-pointer duration-[0.2s] ease-linear"
                         />
                     </div>
-                    <h3 class="text-sm font-medium text-[var(--main-color)]">
+                    <h3
+                        class="text-sm max-md:mt-6 font-medium text-[var(--main-color)]"
+                    >
                         Mortal Engines
                     </h3>
                     <span class="text-xs">100min | Action</span>
@@ -249,7 +270,9 @@
                             class="hover:-translate-y-3 w-full h-full object-cover cursor-pointer duration-[0.2s] ease-linear"
                         />
                     </div>
-                    <h3 class="text-sm font-medium text-[var(--main-color)]">
+                    <h3
+                        class="text-sm max-md:mt-6 font-medium text-[var(--main-color)]"
+                    >
                         UnderWorld Blood Wars
                     </h3>
                     <span class="text-xs">100min | Action</span>
@@ -258,7 +281,10 @@
         </section>
         <!-- Movies -->
         <!-- Coming Soon -->
-        <section id="coming soon" class="max-[991px]:px-[4%] max-[991px]:py-12">
+        <section
+            id="coming soon"
+            class="py-[4.5rem] px-6 max-[991px]:px-[4%] max-[991px]:py-12"
+        >
             <h2
                 class="font-medium text-xl uppercase border-b border-[var(--main-color)] max-w-[1000px] mx-auto"
             >
@@ -275,7 +301,9 @@
                             class="hover:-translate-y-3 w-full h-full object-cover cursor-pointer duration-[0.2s] ease-linear"
                         />
                     </div>
-                    <h3 class="text-sm font-medium text-[var(--main-color)]">
+                    <h3
+                        class="text-sm max-md:mt-6 font-medium text-[var(--main-color)]"
+                    >
                         Joney English
                     </h3>
                     <span class="text-xs">80min | Comedy</span>
@@ -288,7 +316,9 @@
                             class="hover:-translate-y-3 w-full h-full object-cover cursor-pointer duration-[0.2s] ease-linear"
                         />
                     </div>
-                    <h3 class="text-sm font-medium text-[var(--main-color)]">
+                    <h3
+                        class="text-sm max-md:mt-6 font-medium text-[var(--main-color)]"
+                    >
                         WarCrafet
                     </h3>
                     <span class="text-xs">120min | Action</span>
@@ -301,7 +331,9 @@
                             class="hover:-translate-y-3 w-full h-full object-cover cursor-pointer duration-[0.2s] ease-linear"
                         />
                     </div>
-                    <h3 class="text-sm font-medium text-[var(--main-color)]">
+                    <h3
+                        class="text-sm max-md:mt-6 font-medium text-[var(--main-color)]"
+                    >
                         Rampage
                     </h3>
                     <span class="text-xs">108min | Adventure</span>
@@ -314,7 +346,9 @@
                             class="hover:-translate-y-3 w-full h-full object-cover cursor-pointer duration-[0.2s] ease-linear"
                         />
                     </div>
-                    <h3 class="text-sm font-medium text-[var(--main-color)]">
+                    <h3
+                        class="text-sm max-md:mt-6 font-medium text-[var(--main-color)]"
+                    >
                         Airon Lady
                     </h3>
                     <span class="text-xs">120min | Comedy</span>
@@ -327,7 +361,9 @@
                             class="hover:-translate-y-3 w-full h-full object-cover cursor-pointer duration-[0.2s] ease-linear"
                         />
                     </div>
-                    <h3 class="text-sm font-medium text-[var(--main-color)]">
+                    <h3
+                        class="text-sm max-md:mt-6 font-medium text-[var(--main-color)]"
+                    >
                         Justice League
                     </h3>
                     <span class="text-xs">120min | Adventure</span>
@@ -340,7 +376,9 @@
                             class="hover:-translate-y-3 w-full h-full object-cover cursor-pointer duration-[0.2s] ease-linear"
                         />
                     </div>
-                    <h3 class="text-sm font-medium text-[var(--main-color)]">
+                    <h3
+                        class="text-sm max-md:mt-6 font-medium text-[var(--main-color)]"
+                    >
                         Doctor Strange
                     </h3>
                     <span class="text-xs">120min | Adventure</span>
@@ -353,7 +391,9 @@
                             class="hover:-translate-y-3 w-full h-full object-cover cursor-pointer duration-[0.2s] ease-linear"
                         />
                     </div>
-                    <h3 class="text-sm font-medium text-[var(--main-color)]">
+                    <h3
+                        class="text-sm max-md:mt-6 font-medium text-[var(--main-color)]"
+                    >
                         Captain Marvel
                     </h3>
                     <span class="text-xs">120min | Adventure</span>
@@ -366,7 +406,9 @@
                             class="hover:-translate-y-3 w-full h-full object-cover cursor-pointer duration-[0.2s] ease-linear"
                         />
                     </div>
-                    <h3 class="text-sm font-medium text-[var(--main-color)]">
+                    <h3
+                        class="text-sm max-md:mt-6 font-medium text-[var(--main-color)]"
+                    >
                         Black Widow
                     </h3>
                     <span class="text-xs">90min | Action</span>
@@ -379,7 +421,9 @@
                             class="hover:-translate-y-3 w-full h-full object-cover cursor-pointer duration-[0.2s] ease-linear"
                         />
                     </div>
-                    <h3 class="text-sm font-medium text-[var(--main-color)]">
+                    <h3
+                        class="text-sm max-md:mt-6 font-medium text-[var(--main-color)]"
+                    >
                         Ant Man
                     </h3>
                     <span class="text-xs">110min | Adventure</span>
@@ -392,7 +436,9 @@
                             class="hover:-translate-y-3 w-full h-full object-cover cursor-pointer duration-[0.2s] ease-linear"
                         />
                     </div>
-                    <h3 class="text-sm font-medium text-[var(--main-color)]">
+                    <h3
+                        class="text-sm max-md:mt-6 font-medium text-[var(--main-color)]"
+                    >
                         Guardiance Of The Galaxy
                     </h3>
                     <span class="text-xs">120min | Adventure</span>
@@ -403,9 +449,9 @@
         <!-- Newsletter -->
         <section
             id="newsletter"
-            class="news max-w-[1000px] mx-auto flex flex-col items-center justify-center gap-y-8 max-[991px]:px-[4%]: max-[991px]:py-12"
+            class="py-[4.5rem] px-6 max-w-[1000px] mx-auto flex flex-col items-center justify-center gap-y-8 max-[991px]:px-[4%]: max-[991px]:py-12"
         >
-            <h2 class="text-3xl font-semibold text-center leading-normal">
+            <h2 class="text-[1.8rem] font-semibold text-center leading-normal">
                 Subscribe To Get <br />
                 Newsletter
             </h2>
@@ -425,7 +471,7 @@
         <!-- Newsletter -->
         <!-- footer -->
         <section
-            class="flex items-center justify-between max-w-[1000px] mx-auto max-[991px]:px-[4%]: max-[991px]:py-12 max-[472px]:flex-col max-[472px]:items-center max-[472px]:gap-y-4"
+            class="py-[4.5rem] px-6 flex items-center justify-between max-w-[1000px] mx-auto max-[991px]:px-[4%]: max-[991px]:py-12 max-[472px]:flex-col max-[472px]:items-center max-[472px]:gap-y-4"
         >
             <a
                 href="index.html"
